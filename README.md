@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Firebase help
+
+For help about [firebase](https://firebase.google.com)
+To learn about [firebase setup in angular](https://github.com/angular/angularfire2/blob/master/docs/install-and-setup.md)
+To learn about [angular cli](https://github.com/angular/angular-cli)
