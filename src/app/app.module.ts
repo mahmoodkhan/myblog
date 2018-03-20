@@ -10,6 +10,11 @@ import { FirebaseConfig } from '../environments/firebase.config';
 
 import { AppComponent } from './app.component';
 
+import { AppRoutingModule } from './app-routing.module';
+import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
+
+
 
 @NgModule({
   declarations: [
@@ -17,10 +22,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(FirebaseConfig.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AdminModule,
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
