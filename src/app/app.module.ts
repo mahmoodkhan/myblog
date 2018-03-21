@@ -11,14 +11,16 @@ import { FirebaseConfig } from '../environments/firebase.config';
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AdminModule } from './admin/admin.module';
+// import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
+import { HomeComponent } from './home/home.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,7 @@ import { AuthModule } from './auth/auth.module';
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AdminModule,
+    // AdminModule,
     AuthModule,
   ],
   providers: [],
