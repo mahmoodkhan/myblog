@@ -1,3 +1,5 @@
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -11,7 +13,6 @@ import { FirebaseConfig } from '../environments/firebase.config';
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
-// import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 import { HomeComponent } from './home/home.component';
 
@@ -24,12 +25,12 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
     AppRoutingModule,
     AngularFireModule.initializeApp(FirebaseConfig.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    // AdminModule,
     AuthModule,
   ],
   providers: [],
