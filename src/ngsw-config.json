@@ -12,6 +12,9 @@
         "/*.bundle.css",
         "/*.bundle.js",
         "/*.chunk.js"
+      ],
+      "urls": [
+        "https://fonts.googleapis.com/css?family-Material+Icons"
       ]
     }
   }, {
@@ -22,6 +25,30 @@
       "files": [
         "/assets/**"
       ]
+    }
+  }],
+  "dataGroups": [{
+    "name": "api-freshness",
+    "urls": [
+      "/new"
+    ],
+    "cacheConfig": {
+      "maxSize": 100,
+      "maxAge": "1h",
+      "timeout": "10s",
+      "strategy": "freshness"
+    }
+  }, {
+    "name": "api-performance",
+    "urls": [
+      "/",
+      "/admin",
+      "/article"
+    ],
+    "cacheConfig": {
+      "maxSize": 100,
+      "maxAge": "4h",
+      "strategy": "performance"
     }
   }]
 }
