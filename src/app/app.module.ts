@@ -1,5 +1,4 @@
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,13 +7,13 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-import { FirebaseConfig } from '../environments/firebase.config';
+import { environment } from '@env/environment';
+import { FirebaseConfig } from '@env/firebase.config';
+import { AppComponent } from '@myapp/app.component';
 
-import { AppComponent } from './app.component';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AuthModule } from './auth/auth.module';
-import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from '@myapp/app-routing.module';
+import { AuthModule } from '@myapp/auth/auth.module';
+import { HomeComponent } from '@myapp/home/home.component';
 
 
 
