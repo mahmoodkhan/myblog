@@ -34,6 +34,16 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests! - run: yarn test
-      - run: - ng test --watch=false
 
+      - run:
+          name: angular-build
+          command: yarn ng -- build --prod --aot --no-progress
+
+      - run:
+          name: angular-test
+          command: yarn test -- --single-run --no-progress
+
+      - run:
+          name: angular-lint
+          command: yarn lint
 
