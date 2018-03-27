@@ -33,10 +33,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
-      # - run: yarn test
-      - test:
-          override:
-              - ng test --watch=false
+      # run tests! - run: yarn test
+      - run: - ng test --watch=false
 
 
