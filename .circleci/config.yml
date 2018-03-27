@@ -35,8 +35,8 @@ jobs:
 
       # run tests!
       # - run: yarn test
-      test:
-        override:
-          - ng test --watch=false
+      - test:
+          override:
+              - ng test --watch=false
 
 
